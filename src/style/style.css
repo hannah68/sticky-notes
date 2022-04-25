@@ -1,0 +1,92 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.app {
+	padding: 50px;
+	height: 100vh;
+	background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../public/assets/images/brick-wall.jpg");
+	background-size: cover;
+}
+
+.note-form {
+	display: flex;
+	flex-direction: column;
+	width: 200px;
+}
+
+h1 {
+	color: white;
+}
+
+.date {
+	display: block;
+	color: #fff;
+	margin-bottom: 1rem;
+	font-size: 14px;
+	font-style: italic;
+	height: 14px;
+}
+
+textarea {
+	font-family: Arial, Helvetica, sans-serif;
+	border: 1px solid lightgrey;
+	min-width: 100%;
+	max-width: 100%;
+	height: 100px;
+	padding: 10px;
+	outline: none;
+}
+
+.btn {
+	width: 100%;
+	background-color: #fff27f;
+	cursor: pointer;
+	padding: 10px;
+	border: 0;
+	outline: none;
+}
+
+.btn:hover {
+	background-color: tomato;
+	color: white;
+}
+
+.note {
+	position: absolute;
+	cursor: pointer;
+	background-image: url("../../public/assets/images/post-it-note.png");
+	background-size: cover;
+	top: 100px;
+	left: 300px;
+	height: 200px;
+	width: 200px;
+	padding: 20px;
+}
+
+.note .text {
+	font-family: Arial, Helvetica, sans-serif;
+	height: 100%;
+	width: 100%;
+	white-space: pre-wrap;
+	/* overflow-y: scroll; */
+	word-break: break-word;
+	overflow-y: auto;
+}
+
+.note .close {
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	right: 15px;
+	transition: transform 0.3s ease;
+}
+
+.close:hover {
+	transform: scale(1.6);
+}
